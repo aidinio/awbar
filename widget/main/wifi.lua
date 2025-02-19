@@ -70,7 +70,7 @@ local function wifi()
 		"PropertiesChanged", "/org/freedesktop/NetworkManager", nil, Gio.DBusSignalFlags.NONE, onDBusSignalCallback)
 	gears.timer{timeout = 0, autostart = true, start_now = true, single_shot = true,callback = onDBusSignalCallback}
 	wifi_widget.buttons = gears.table.join(
-		awful.button({}, 1, function()
+		awful.button({}, 1, function() -- TODO: call disconnect on dbus and toggle on success (check with propertyChanged)
 			wifi_widget:toggle()
 		end)
 	)

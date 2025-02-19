@@ -278,7 +278,7 @@ local function music_player()
         valign = "center",
     }
 
-    local slider_widget = wibox.widget.base.make_widget_declarative {
+local slider_widget = wibox.widget.base.make_widget_declarative {
         bar_shape           = function(cr, width, height)
             gears.shape.rounded_rect(cr, width, height, 20)
         end,

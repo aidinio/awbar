@@ -2,7 +2,7 @@ local wibox = require("wibox")
 local gears = require("gears")
 local naughty = require("naughty")
 
-local function slider(icon_name, callback)
+local function slider(icon_name, callback, max_value)
     local bar_widget = wibox.widget.base.make_widget_declarative {
         bar_shape        = function(cr, width, height)
             gears.shape.partially_rounded_rect(cr, width, height, false,
@@ -15,8 +15,9 @@ local function slider(icon_name, callback)
         handle_color     = "#ff000001",
         handle_cursor    = "hand2",
         bar_active_color = "#C6E7FC",
-        max_value        = 100,
-        value            = 50,
+        max_value        = max_value,
+        value            = max_value,
+        fs_value         = max_value,
         forced_height    = 19,
         forced_width     = 0,
         --paddings = 3,
@@ -55,10 +56,16 @@ local function slider(icon_name, callback)
             bar_widget,
             layout = wibox.layout.align.horizontal,
             update_value = function(new_value)
-                bar_widget.value = new_value
+                if bar_widget.value ~= new_value then
+                    bar_widget.value = new_value
+                    
+                end
+            end,
+            get_value = function()
+                return bar_widget.value
             end
         }
-        callback = callback or function () end
+    callback = callback or function() end
     bar_widget:connect_signal("property::value", function(_, val) callback(val) end)
 
     return widget

@@ -1,6 +1,6 @@
 local gears = require("gears")
 local awful = require("awful")
-local switch = require("hover.widget.wrapper.switch")
+local switch = require("awbar.widget.wrapper.switch")
 
 local function airplane()
    local airplane_widget = switch("airplane").widget

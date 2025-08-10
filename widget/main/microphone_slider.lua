@@ -1,3 +1,3 @@
-local slider = require("hover.widget.wrapper.slider")
+local slider = require("awbar.widget.wrapper.slider")
 
 return slider("microphone")

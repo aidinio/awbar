@@ -1,4 +1,4 @@
-local slider = require("hover.widget.wrapper.slider")
+local slider = require("awbar.widget.wrapper.slider")
 local naughty = require("naughty")
 
 local Gio = require("lgi").Gio

@@ -2,7 +2,7 @@ local awful = require("awful")
 local wibox = require("wibox")
 local gears = require("gears")
 
-local button = require("hover.widget.wrapper.button")
+local button = require("awbar.widget.wrapper.button")
 local lock_widget = button("lock")
 
 lock_widget:buttons(gears.table.join(

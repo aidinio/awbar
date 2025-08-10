@@ -6,9 +6,9 @@ local awful = require("awful")
 file_path = debug.getinfo(1, "S").source:sub(2):match("(.*[/\\])")
 
 function bar(args)
-	theme_module = "hover.theme." .. args.theme
+	theme_module = "awbar.theme." .. args.theme
 	theme_root = tostring(debug.getinfo(1).source):match("(/.*/)") .. "theme/" .. args.theme .. "/"
-	demo_assets = require("hover.demo_assets")
+	demo_assets = require("awbar.demo_assets")
 	fonts = require(theme_module .. ".font")
 	colors = require(theme_module .. ".color")
 	icons = require(theme_module .. ".icon")
@@ -17,29 +17,29 @@ function bar(args)
 			panel.visible = not panel.visible
 		end)
 	)
-	local wifi_widget = require("hover.widget.main.wifi")().widget
+	local wifi_widget = require("awbar.widget.main.wifi")().widget
 	wifi_widget:toggle("off")
-	local bluetooth_widget = require("hover.widget.main.bluetooth")().widget
-	-- wifi_widget = require("hover.widget.wrapper.switch")("wifi").widget
-	local battery_status_bar = require("hover.widget.main.battery")
-	local ram_status_bar = require("hover.widget.main.ram")
-	local cpu_status_bar = require("hover.widget.main.cpu")
-	local clock = require("hover.widget.bar.clock")
-	local battery_widget = require("hover.widget.bar.battery")
-	local time_widget = require("hover.widget.main.time")
-	local microphone_widget = require("hover.widget.main.microphone")().widget
-	local bluelight_widget = require("hover.widget.main.bluelight")().widget
-	local silent_widget = require("hover.widget.main.silent")().widget
-	local airplane_widget = require("hover.widget.main.airplane")().widget
-	local shutdown_button = require("hover.widget.main.shutdown")
-	local restart_button = require("hover.widget.main.restart")
-	local sleep_button = require("hover.widget.main.sleep")
-	local lock_button = require("hover.widget.main.lock")
-	local volume_slider = require("hover.widget.main.volume")
-	local brightness_slider = require("hover.widget.main.brightness")
-	local microphone_slider = require("hover.widget.main.microphone_slider")
-	local music_player = require("hover.widget.main.music_player")()
-	local time_info = require("hover.widget.main.time_info")()
+	local bluetooth_widget = require("awbar.widget.main.bluetooth")().widget
+	-- wifi_widget = require("awbar.widget.wrapper.switch")("wifi").widget
+	local battery_status_bar = require("awbar.widget.main.battery")
+	local ram_status_bar = require("awbar.widget.main.ram")
+	local cpu_status_bar = require("awbar.widget.main.cpu")
+	local clock = require("awbar.widget.bar.clock")
+	local battery_widget = require("awbar.widget.bar.battery")
+	local time_widget = require("awbar.widget.main.time")
+	local microphone_widget = require("awbar.widget.main.microphone")().widget
+	local bluelight_widget = require("awbar.widget.main.bluelight")().widget
+	local silent_widget = require("awbar.widget.main.silent")().widget
+	local airplane_widget = require("awbar.widget.main.airplane")().widget
+	local shutdown_button = require("awbar.widget.main.shutdown")
+	local restart_button = require("awbar.widget.main.restart")
+	local sleep_button = require("awbar.widget.main.sleep")
+	local lock_button = require("awbar.widget.main.lock")
+	local volume_slider = require("awbar.widget.main.volume")
+	local brightness_slider = require("awbar.widget.main.brightness")
+	local microphone_slider = require("awbar.widget.main.microphone_slider")
+	local music_player = require("awbar.widget.main.music_player")()
+	local time_info = require("awbar.widget.main.time_info")()
 
 	bar = wibox.widget {
 		{

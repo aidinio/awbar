@@ -1,6 +1,6 @@
 local awful = require("awful")
 local gears = require("gears")
-local switch = require("hover.widget.wrapper.switch")
+local switch = require("awbar.widget.wrapper.switch")
 
 local function silent()
    local silent_widget = switch("bell-slash").widget

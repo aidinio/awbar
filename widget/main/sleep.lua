@@ -1,7 +1,7 @@
 local awful = require("awful")
 local gears = require("gears")
 
-local button = require("hover.widget.wrapper.button")
+local button = require("awbar.widget.wrapper.button")
 local sleep_widget = button("sleep")
 
 sleep_widget:buttons(gears.table.join(

@@ -9,9 +9,9 @@ local function svgsurf(context, cr, width, height)
 	-- 	title = "WOWW",
 	-- 	text = "HELLO"
 	-- })
-	-- local svg_surface = gears.surface("/home/aidin/.config/awesome/hover/theme/nord_m/icon/bluetooth-connected.svg")
+	-- local svg_surface = gears.surface("/home/aidin/.config/awesome/awbar.theme/nord_m/icon/bluetooth-connected.svg")
 
-	-- local image_surface = gears.surface("/home/aidin/.config/awesome/hover/theme/nord_m/icon/bluetooth-connected.svg")
+	-- local image_surface = gears.surface("/home/aidin/.config/awesome/awbar.theme/nord_m/icon/bluetooth-connected.svg")
 	-- local resized_image_surface = cairo.ImageSurface(cairo.Format.RGB24, height, height)
 	-- local resized_cr = cairo.Context(resized_image_surface)
 	

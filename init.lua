@@ -1,3 +1,3 @@
-bar = require("hover.bar")
+bar = require("awbar.bar")
 
 return bar

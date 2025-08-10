@@ -1,7 +1,7 @@
 local gears = require("gears")
 local math = math
 
-local status_bar = require("hover.widget.wrapper.status_bar")
+local status_bar = require("awbar.widget.wrapper.status_bar")
 local battery_bar = status_bar("battery-charging", "#A3BE8C", "#36402E", 75)
 
 gears.timer {
